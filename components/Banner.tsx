@@ -5,7 +5,7 @@ function Banner() {
         <h1 className="text-7:xl">Smart TVs and IoT Labs</h1>
         <h2 className="mt-5 md:mt-0">
           Welcome to{" "}
-          <span className="underline decoration-4 decoration-[#F7AB0A]">
+          <span className="underline decoration-4 decoration-[#14aeff]">
             Every Developers
           </span>{" "}
           favourite blog in the Devosphere
