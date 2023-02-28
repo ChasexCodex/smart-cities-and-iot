@@ -6,7 +6,8 @@ module.exports = {
   },
   images: {
     domains: [
-      'hbku.edu.qa'
+      'hbku.edu.qa',
+      'links.papareact.com',
     ]
   }
 }
