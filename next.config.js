@@ -8,6 +8,7 @@ module.exports = {
     domains: [
       'hbku.edu.qa',
       'links.papareact.com',
+      'cdn.sanity.io',
     ]
   }
 }
