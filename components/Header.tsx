@@ -17,7 +17,7 @@ function Header() {
       </div>
       <div>
         <Link href="/"
-          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#14aeff] flex items-center rounded-full"
+          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-brand flex items-center rounded-full"
         >
           Sign up for our newsletter
         </Link>

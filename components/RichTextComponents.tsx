@@ -39,7 +39,7 @@ export const RichTextComponents: Partial<PortableTextReactComponents> = {
     ),
 
     blockquote: ({children}) => (
-      <blockquote className="border-l-[#F7AB0A] border-l-4 pl-5 py-5 my-5">
+      <blockquote className="border-l-brand border-l-4 pl-5 py-5 my-5">
         {children}
       </blockquote>
     ),
@@ -53,7 +53,7 @@ export const RichTextComponents: Partial<PortableTextReactComponents> = {
         <Link
           href={value.href}
           rel={rel}
-          className="underline decoration-[#F7AB0A] hover:decoration-black">
+          className="underline decoration-brand hover:decoration-black">
           {children}
         </Link>
       )
