@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className="max-w-4xl mx-auto">
+      <body className="max-w-4xl mx-auto bg-slate-100">
         <Header/>
         <Banner/>
         <Navbar/>

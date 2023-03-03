@@ -9,6 +9,7 @@ module.exports = {
       'hbku.edu.qa',
       'links.papareact.com',
       'cdn.sanity.io',
+      'picsum.photos',
     ]
   }
 }
