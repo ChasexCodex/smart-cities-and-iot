@@ -3,25 +3,17 @@ import Image from 'next/image'
 
 function Header() {
   return (
-    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
-      <div>
+    <header className="flex flex-col items-center justify-center font-bold px-2 lg:px-10 py-5">
+      <div className="relative w-full h-60 px-4">
         <Link href="/">
           <Image
             src="https://www.hbku.edu.qa/sites/default/files/media/images/hbku_2021.svg"
-            width={135*2}
-            height={69*2}
             alt="Logo"
+            fill
           />
         </Link>
-        <h1>Smart TVs and IoT Labs</h1>
       </div>
-      <div>
-        <Link href="/"
-          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-brand flex items-center rounded-full"
-        >
-          Sign up for our newsletter
-        </Link>
-      </div>
+      <h1 className="lg:mt-10 text-5xl text-center font-extrabold">Smart Cities & IoT Lab</h1>
     </header>
   )
 }
