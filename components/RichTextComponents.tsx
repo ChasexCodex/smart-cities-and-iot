@@ -10,7 +10,7 @@ export const RichTextComponents: Partial<PortableTextReactComponents> = {
         <Image
           className="object-contain"
           src={urlFor(value).url()}
-          alt="Blog Post Image"
+          alt="Blog PostBanner Image"
           fill
         />
       </div>

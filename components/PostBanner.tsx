@@ -8,7 +8,7 @@ type Props = {
   data: Post
 }
 
-function Post({data: post}: Props) {
+function PostBanner({data: post}: Props) {
   return (
     <ClientSideRoute key={post._id} route={`/posts/${post.slug.current}`}>
       <div className="flex flex-col group cursor-pointer">
@@ -56,4 +56,4 @@ function Post({data: post}: Props) {
   )
 }
 
-export default Post
+export default PostBanner
