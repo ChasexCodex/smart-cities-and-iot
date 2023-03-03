@@ -11,23 +11,14 @@ type Props = {
   }
 }
 
-export const revalidate = 60
-
-export async function generateStaticParams() {
-  const query = groq`*[_type=='post']
-  {
-    slug
-  }`
-
-  const slugs: Post[] = await client.fetch(query)
-  const slugRoutes = slugs.map(slug => slug.slug.current)
-
-  return slugRoutes.map(slug => ({
-    slug
-  }))
+export function generateMetadata({params}: Props) {
+  return {title: params?.slug};
 }
 
-export default async function Post({params: {slug}}: Props) {
+
+export const revalidate = 60
+
+export async function getPost(slug: string) {
   const query = groq`
     *[_type=='post' && slug.current == $slug][0]
     {
@@ -37,7 +28,25 @@ export default async function Post({params: {slug}}: Props) {
     }
   `
 
-  const post: Post = await client.fetch(query, {slug})
+  return await client.fetch(query, {slug}) as Post
+}
+
+export async function generateStaticParams() {
+  const query = groq`
+  *[_type=='post']
+    {
+      slug
+    }
+  `
+
+  return (await client.fetch(query))
+    .map((p: Post) => ({
+      slug: p.slug.current,
+    }))
+}
+
+export default async function Post({params: {slug}}: Props) {
+  const post = await getPost(slug)
 
   return (
     <article className="px-10 pb-28">
@@ -76,7 +85,9 @@ export default async function Post({params: {slug}}: Props) {
             />
             <div>
               <h3 className="text-lg font-bold">{post.author.name}</h3>
-              <div>{/*TODO: author BIO*/}</div>
+              <div>
+                <PortableText value={post.author.bio} components={RichTextComponents}/>
+              </div>
             </div>
           </div>
         </div>
