@@ -11,7 +11,7 @@ function LinkItem({href, children}: LinkListItemProps) {
   return (
     <li>
       <Link href={href}>
-        <p className="py-2 px-1 min-w-max">
+        <p className="py-2 min-w-max">
           {children}
         </p>
       </Link>
@@ -32,6 +32,14 @@ function MenuButton({onClick}: {onClick: () => void}) {
   )
 }
 
+function Separator() {
+  return (
+    <div className="flex-1 flex justify-center">
+      <div className="border-l-2 h-full border-white"></div>
+    </div>
+  )
+}
+
 function Navbar() {
   const [open, setOpen] = useState(false)
   
@@ -45,17 +53,23 @@ function Navbar() {
           <MenuButton onClick={onClick}/>
         </div>
         <div className={`lg:block ${open ? '' : 'hidden'}`}>
-          <ul className="flex flex-col lg:flex-row justify-center font-medium divide-y-2 lg:divide-y-0 lg:divide-x-2 py-0.5">
+          <ul className="flex flex-col lg:flex-row font-medium divide-y-2 lg:divide-y-0 py-0.5">
+            <div className="flex-1"/>
             <LinkItem href="/">Home</LinkItem>
+            <Separator/>
             <LinkItem href="/people">People</LinkItem>
+            <Separator/>
             <LinkItem href="/research-topics">Research Topics</LinkItem>
+            <Separator/>
             <LinkItem href="/equipment">Equipment</LinkItem>
+            <Separator/>
             <LinkItem href="/publications">Publications</LinkItem>
             {/*<LinkItem href="/collaborations">Collaborations</LinkItem>*/}
             {/*<LinkItem href="/projects">Projects</LinkItem>*/}
             {/*<LinkItem href="/tools">Tools</LinkItem>*/}
             {/*<LinkItem href="/contests">Contests</LinkItem>*/}
             {/*<LinkItem href="/seminars">Seminars</LinkItem>*/}
+            <div className="flex-1"/>
           </ul>
         </div>
       </nav>
