@@ -51,11 +51,11 @@ function Navbar() {
             <LinkItem href="/research-topics">Research Topics</LinkItem>
             <LinkItem href="/equipment">Equipment</LinkItem>
             <LinkItem href="/publications">Publications</LinkItem>
-            <LinkItem href="/collaborations">Collaborations</LinkItem>
-            <LinkItem href="/projects">Projects</LinkItem>
-            <LinkItem href="/tools">Tools</LinkItem>
-            <LinkItem href="/contests">Contests</LinkItem>
-            <LinkItem href="/seminars">Seminars</LinkItem>
+            {/*<LinkItem href="/collaborations">Collaborations</LinkItem>*/}
+            {/*<LinkItem href="/projects">Projects</LinkItem>*/}
+            {/*<LinkItem href="/tools">Tools</LinkItem>*/}
+            {/*<LinkItem href="/contests">Contests</LinkItem>*/}
+            {/*<LinkItem href="/seminars">Seminars</LinkItem>*/}
           </ul>
         </div>
       </nav>
