@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons'
 
 function Person() {
   return (
@@ -6,19 +9,19 @@ function Person() {
       <div className="relative w-full aspect-square">
         <Image
           className="object-contain object-center rounded-full"
-          src="https://picsum.photos/400/400" // TODO
+          src="/placeholder-man.jpg" // TODO
           alt="Alt" // TODO
           fill
         />
       </div>
       <div className="mt-2">
-        <p className="text-xl font-semibold">Prof. Franklin Douglas</p>
+        <p className="text-xl font-semibold">Prof. lorem ipsum</p>
         <p>Assistant Professor</p>
       </div>
-      <div className="flex flex-row justify-between w-full">
-        <p>A</p>{/*TODO*/}
-        <p>B</p>{/*TODO*/}
-        <p>C</p>{/*TODO*/}
+      <div className="flex flex-row justify-between w-full h-6 mt-2">
+        <FontAwesomeIcon icon={faLinkedin}/>
+        <FontAwesomeIcon icon={faEnvelope}/>
+        <FontAwesomeIcon icon={faPhone}/>
       </div>
     </div>
   )

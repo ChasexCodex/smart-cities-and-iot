@@ -11,7 +11,7 @@ function LinkItem({href, children}: LinkListItemProps) {
   return (
     <li>
       <Link href={href}>
-        <p className="py-1 px-1 min-w-max">
+        <p className="py-2 px-1 min-w-max">
           {children}
         </p>
       </Link>
@@ -36,16 +36,16 @@ function Navbar() {
   const [open, setOpen] = useState(false)
   
   const onClick = () => setOpen(p => !p)
-  
+
   return (
     <div className="px-2 lg:px-10">
-      <nav className="py-2 bg-gradient-to-b from-orange-50 via-brand to-orange-50">
+      <nav className="bg-gradient-to-b from-[#54c5ff] via-brand to-[#00aaff] drop-shadow-lg">
         <div className="flex px-2 justify-between mb-2 lg:hidden">
           <p className="font-bold">Explore</p>
           <MenuButton onClick={onClick}/>
         </div>
-        <div id="navbar-collapsable" className={`lg:block ${open ? '' : 'hidden'}`}>
-          <ul className="flex flex-col lg:flex-row justify-center font-semibold divide-y-2 lg:divide-y-0 lg:divide-x-2 p-1">
+        <div className={`lg:block ${open ? '' : 'hidden'}`}>
+          <ul className="flex flex-col lg:flex-row justify-center font-medium divide-y-2 lg:divide-y-0 lg:divide-x-2 py-0.5">
             <LinkItem href="/">Home</LinkItem>
             <LinkItem href="/people">People</LinkItem>
             <LinkItem href="/research-topics">Research Topics</LinkItem>
